@@ -12,12 +12,27 @@ type User {
     savedBooks: [Book]
   }
 
+type Book {
+    bookId: String
+    authors: [String]
+    description: String!
+    image: String
+    link: String
+    title: String!
+}
+
+input savedBook {
+
+}
+
 type Query {
     me: User
-  }
+}
+
 type Mutation {
     
 }
+
 type Auth {
     token: ID!
     user: User
